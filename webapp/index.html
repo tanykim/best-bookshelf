@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicons/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicons/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="Swimmers' History: Elite Swimmers Competition Results"/>
+    <meta name="msapplication-TileColor" content="#" />
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="favicons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="favicons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="favicons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="favicons/mstile-310x310.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tanykim">
+    <meta name="twitter:creator" content="@tanykim">
+    <meta name="twitter:title" content="Best Bookshelf">
+    <meta name="twitter:description" content="Data Visualization of the New York Times Best Books, created by @tanykim, data from @goodreads & @nytimesbooks">
+    <meta name="twitter:image" content="http://tany.kim/best-bookshelf/images/project.png">
+    <meta property="fb:app_id" content="http://tany.kim/best-bookshelf"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://tany.kim/best-bookshelf"/>
+    <meta property="og:title" content="Best Bookshelf"/>
+    <meta property="og:site_name" content="Data Visualization of the New York Times Best Books"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:description" content="Explore +200 best books selected by the New York Times since 1996"/>
+    <meta property="og:image" content="http://tany.kim/best-bookshelf/images/project.png"/>
+    <meta property="og:image:type" content="image/png"/>
+    <meta name="description" content="Data Visualization of best books selected by the New York Times since 1996. Created by Tanyoung Kim. Powered by Goodreads API & the New York Times Books API"/>
+    <meta name="keywords" content="Data Visualization, UX Design, D3, Books, Reading, New York Times Best Books">
+    <meta name="author" content="Tanyoung Kim, Data Visualization Designer, Ph.D. in Digital Media, Georgia Tech">
+    <link rel="stylesheet" type="text/css" href="styles/tippy.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <title>Best Bookshelf</title>
+  </head>
+  <body>
+    <!-- old circle -->
+<!--     <div class="container">
+      <div class="columns  is-multiline" id="years">
+        <div class="column is-one-quarter">
+          <div id="one-quarter"><svg id="legend"></svg></div>
+        </div>
+      </div>
+    </div> -->
+    <div class="wrapper">
+      <div class="columns is-multiline header">
+        <div class="column is-12 logo">
+          <div class="logo-text-wrapper">
+            <div class="logo-bb"><span class="logo-best">Best</span> <span class="logo-book">Book</span></div>
+            <div class="logo-shelf"><span class="shelf-text">She<span class="l-text"></span>f</span></div>
+          </div>
+        </div>
+        <div class="column is-12 headline">
+          <span class="count" id="headline-count"></span> best books selected by <span class="nyt">the New York Times</span> from
+          <span class="year" id="headline-year-start"></span> to <span class="year" id="headline-year-end"></span>
+        </div>
+        <div class="links is-hidden-touch">
+          <a href="#Visualization">Visualization</a>
+          <a href="#datasets">Datasets</a>
+        </div>
+        <div class="links links-mobile is-hidden-desktop" id="links">
+          <span class="links-line"></span>
+          <span class="links-line"></span>
+          <span class="links-line"></span>
+        </div>
+        <div class="links-mobile-expanded is-hidden js-mobile-menu">
+          <a href="#Visualization">Visualization</a>
+          <a href="#datasets">Datasets</a>
+          <span class="links-close" id="links-close"><a href="#" class="close-thin"></a></span>
+        </div>
+      </div>
+
+      <div class="container">
+        <!-- search -->
+        <div class="search">
+          <div class="field">
+            <label class="label">Search</label>
+            <p class="control search-input-wrapper">
+              <input class="input is-small" id="search-input" type="text" placeholder="Book title, author's name, publisher">
+              <span class="close-x is-hidden js-search-elm js-search-close"><a href="#" class="close-thin"></a><span>
+            </p>
+            <ul class="search-result is-hidden js-search-elm" id="search-result"></ul>
+          </div>
+        </div>
+        <!-- sort options -->
+        <div class="options">
+          <div class="field">
+            <label class="label">Organize best books by</label>
+            <p class="control">
+              <span class="select is-small">
+                <select id="sort-0">
+                  <option selected value="year_desc">Selected Year (New to Old)</option>
+                  <option value="year_asc">Selected Year (Old to New)</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="genre">Fiction / Nonfiction</option>
+                  <option value="gender">Female / Male (Author's Gender)</option>
+                  <option value="is_not_bestseller">NYT Best Seller / Not Best Seller </option>
+                  <option value="is_english">Translated / English</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="title">Book Title</option>
+                  <option value="title_asc">Length of Book Title (Short to Long)</option>
+                  <option value="title_desc">Length of Book Title (Long to Song)</option>
+                  <option value="first_name">Author's First Name</option>
+                  <option value="last_name">Author's Last Name</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="pages_asc">Number of Pages (Small to Large)</option>
+                  <option value="pages_desc">Number of Pages (Large to Small)</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="age_asc">Author's Age at Publication (Young to Old)</option>
+                  <option value="age_desc">Author's Age at Publication (Old to Young)</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="rating_asc">Rating (Low to High)</option>
+                  <option value="rating_desc">Rating (High to Low)</option>
+                  <option value="rating_count_asc">Number of Ratings (Small to Large)</option>
+                  <option value="rating_count_desc">Number of Ratings (Large to Small)</option>
+                </select>
+              </span>
+            </p>
+          </div>
+          <div class="field" id="option-1">
+            <label class="label">then</label>
+            <p class="control">
+              <span class="select is-small">
+                <select id="sort-1">
+                  <option value="year_desc">Selected Year (New to Old)</option>
+                  <option value="year_asc">Selected Year (Old to New)</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option selected value="genre">Fiction / Nonfiction</option>
+                  <option value="gender">Female / Male (Author's Gender)</option>
+                  <option value="is_not_bestseller">NYT Best Seller / Not Best Seller </option>
+                  <option value="is_english">Translated / English</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="title">Book Title</option>
+                  <option value="title_asc">Length of Book Title (Short to Long)</option>
+                  <option value="title_desc">Length of Book Title (Long to Song)</option>
+                  <option value="first_name">Author's First Name</option>
+                  <option value="last_name">Author's Last Name</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="pages_asc">Number of Pages (Small to Large)</option>
+                  <option value="pages_desc">Number of Pages (Large to Small)</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="age_asc">Author's Age at Publication (Young to Old)</option>
+                  <option value="age_desc">Author's Age at Publication (Old to Young)</option>
+                  <option disabled="disabled">&#x2500;&#x2500;&#x2500;&#x2500;</option>
+                  <option value="rating_asc">Rating (Low to High)</option>
+                  <option value="rating_desc">Rating (High to Low)</option>
+                  <option value="rating_count_asc">Number of Ratings (Small to Large)</option>
+                  <option value="rating_count_desc">Number of Ratings (Large to Small)</option>
+                </select>
+              </span>
+            </p>
+          </div>
+        </div>
+        <!-- put shelf here -->
+        <div id="shelf" class="shelf-wrapper">
+          <svg id="shelf-svg">
+            <!--pattern for female authors-->
+            <defs>
+              <pattern id="female-Fiction" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="12" class="diagonal-Fiction"></line>
+                <line x1="3" y1="0" x2="3" y2="12" class="diagonal-common"></line>
+              </pattern>
+              <pattern id="female-Nonfiction" width="6" height="6" patternTransform="rotate(45 0 0)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="12" class="diagonal-Nonfiction"></line>
+                <line x1="3" y1="0" x2="3" y2="12" class="diagonal-common"></line>
+              </pattern>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!--contents -->
+    <div class="content">
+      <div class="container">
+        <div class="section">
+          <a name="Visualization"></a>
+          <h1>Visualization</h1>
+          <div class="columns is-gapless is-multiline">
+            <div class="column legend is-one-quarter-desktop is-half-tablet">
+              <img src="images/legend1.svg" width="100%">
+              <ul>
+                <li>The <i>width</i> of each book represents the <i>page numbers.</i></li>
+                <li>The <i>height</i> of each book represents the <i>average ratings</i> by Goodreads users.</li>
+                <li>The height of <i>overlayed rectangle</i> is the <i>age of the author</i> at original  publication.</li>
+              </ul>
+            </div>
+            <div class="column legend is-one-quarter-desktop is-half-tablet">
+              <img src="images/legend2.svg" width="100%">
+              <ul>
+                <li>Genre (<i class="fiction">Fiction</i> & <i class="nonfiction">Nonfiction</i>) is color-coded, in <i class="fiction">green</i> and <i class="nonfiction">red</i> respectively.</li>
+              </ul>
+            </div>
+            <div class="column legend is-one-quarter-desktop is-half-tablet">
+              <img src="images/legend3.svg" width="100%">
+              <ul>
+                <li>Books by <i>woman</i> authors are filled with <i>diagonal lines</i>, <i>man</i> authors are <i>solid</i>.</li>
+              </ul>
+            </div>
+            <div class="column legend is-one-quarter-desktop is-half-tablet">
+              <img src="images/legend4.svg" width="100%">
+              <ul>
+                <li>The New York Times <i>best sellers</i> are tagged with a <i>star</i>.</li>
+                <li><i>Translated books</i> are highlighted with a <i>triangle</i> on the top left edge.</li>
+              </ul>
+            </div>
+          </div>
+          <a name="datasets"></a>
+          <h1>Datasets</h1>
+          <ul>
+            <li>The title and author (including translator and or editors) of best books are manually scrapped from the New York Times articles.</li>
+            <li>Meta information of each book (incl. page numbers, ratings, publishers) and author (incl. gender, birth and death dates) is acquired with <a href="https://www.goodreads.com/api" target="_blank">Goodread APIs</a> or parsed from Goodreads pages. Some missing information is added later manually.</li>
+            <li>The New York Times bestseller information is acquired with <a href="https://developer.nytimes.com/books_api.json" target="_blank">the New York Times Books API.</a></li>
+            <li>The dataset was generated on <span id="generation-date"></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--footer -->
+    <div class="footer">
+      <div class="container">
+        <p class="share">
+          Share &nbsp;
+          <span><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//tany.kim/best-bookshelf"><span class="facebook"></span></a></span>
+          <span><a href="https://twitter.com/home?status=%23data%20%23visualization%20of%20best%20books%20by%20%40nytimesbooks%20from%201996%20to%202016.%20Meta%20data%20via%20%40goodreads%20%23d3%20%23dataviz%20%23datavis"><span class="twitter"></span></a></span>
+          <span><a href="https://plus.google.com/share?url=http%3A//tany.kim/best-bookshelf"><span class="googleplus"></span></a></span>
+          <span><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//tany.kim/best-bookshelf&title=Best%20BookShelf&summary=Data%20Visualization%20of%20best%20books%20by%20the%20New%20York%20Times%20from%201996%20to%202016&source="><span class="linkedin"></span></a></span>
+          <span><a href="mailto:?&subject=Data Visualization of Best Books&body=Check%20this%20out%20cool%20visualization!%0Ahttp%3A//tany.kim/best-bookshelf"><span class="email"></span></a></span></p>
+        <p class="share">Created by &nbsp; <a href="http://tany.kim" target="_blank">Tanyoung Kim</a></p>
+        <p class="share">
+          Lear more &nbsp;
+          <span><a href="https://github.com/tanykim/best-bookshelf" target="_blank"><span class="github"></span></a></span>
+          <!-- <span><a href="" target="_blank"><span class="medium"></span></a></a></span> -->
+        </p>
+      </div>
+    </div>
+    <!--modal comes here-->
+    <div class="modal" id="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="card">
+          <div class="card-content">
+            <div class="modal-count js-modal-count"></div>
+            <div class="media">
+              <div class="media-left">
+                <figure class="image">
+                  <img class="js-book-image">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="title is-5">
+                  <span class="js-d-title"></span>
+                  <a target="_blank" class="js-d-title-link"><span class="modal-link"></span></a>
+                  <span class="subtitle is-6 js-d-subtitle-wrapper is-hidden"><br/><span class="js-d-subtitle"></span></span>
+                  <div class="modal-author-info">
+                    By <span class="js-d-author"></span><span class="js-d-translator-wrapper">, translated by <span class="js-d-translator"></span></span><span class="js-d-editor-wrapper">, edited by <span class="js-d-editor"></span></span>
+                  </div>
+                </div>
+                <span class="tag tag-year js-d-year"></span>
+                <span class="tag js-d-genre"></span>
+                <div class="info-elm">
+                  <p><span class="info js-d-pages"></span> pages</p>
+                  <p>Published <span class="info js-d-publication_date"></span> by <span class="info js-d-publisher"></span></p>
+                  <p>Rated <span class="info js-d-rating_avg"></span> by <span class="info js-d-rating_count"></span> Goodreads users</p>
+                </div>
+              </div>
+            </div>
+            <div id="modal-authors" class="media media-authors"></div>
+            <div class="media js-d-bestseller-wrapper is-hidden">
+              <div class="media-content">
+                The New York Times best seller highest rank
+                <ul class="info modal-bestseller-list js-d-bestseller"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close is-large" id="modal-close"></button>
+      <div class="js-modal-prev is-hidden modal-prev"><i class="arrow-left"></i></div>
+      <div class="js-modal-next is-hidden modal-next"><i class="arrow-right"></i></div>
+    </div>
+  </body>
+  <script src="libs/lodash.min.js"></script>
+  <script src="libs/d3.min.js"></script>
+  <script src="libs/tippy.min.js"></script>
+  <script src="js/data.js"></script>
+  <!-- <script src="js/data-old.js"></script> -->
+  <!-- <script src="js/main-circle.js"></script> -->
+  <script src="js/main.js"></script>
+</html>

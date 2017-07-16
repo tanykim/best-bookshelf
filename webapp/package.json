@@ -1,0 +1,14 @@
+{
+  "name": "tany-kim",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "bulma": "^0.4.1",
+    "node-sass": "^4.5.2",
+    "open-color": "^1.5.1"
+  },
+  "scripts": {
+    "build-css": "node_modules/node-sass/bin/node-sass styles/ -o styles/",
+    "watch-css": "npm run build-css && node_modules/node-sass/bin/node-sass styles/ -o styles/ --watch --recursive"
+  }
+}
