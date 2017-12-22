@@ -20,7 +20,7 @@ def to_dict(input_ordered_dict):
 #save intermediate results as csv - append rows
 def save_as_csv(filename, data):
     has_data = False
-    with open('csv/' + filename + '.csv', 'r', encoding='utf-8') as f:
+    with open('csv/' + filename + '.csv', 'r', encoding='latin-1') as f:
         reader = csv.reader(f)
         #if already saved
         for row in reader:

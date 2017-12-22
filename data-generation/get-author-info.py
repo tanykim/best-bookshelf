@@ -34,20 +34,22 @@ def search_wiki(name):
 def update_author_info(author_id):
     author_obj = goodreads.get_object('author', author_id)
     author_info = dict(author_id=author_id)
+    print (author_info)
     dict_fields = ['name', 'image_url', 'link']
     for field in dict_fields:
         author_info[field] = author_obj[field]
-    #COMMENT this for the first run, updated with manually added birth and death dates
-    update_fields = ['gender', 'birth_year', 'birth_month', 'birth_day', 'death_year', 'death_month', 'death_day']
-    for field in update_fields:
-        author_info[field] = author_manual[author_id][field]
+    #COMMENT following three lines, this for the first run and the manual addition of birth and death dates
+    # update_fields = ['gender', 'birth_year', 'birth_month', 'birth_day', 'death_year', 'death_month', 'death_day']
+    # for field in update_fields:
+    #     author_info[field] = author_manual[author_id][field]
     return author_info
 
 #get author gender and birth and death dates
 def get_author_info(author_id):
     author_obj = goodreads.get_object('author', author_id)
     author_info = dict(author_id=author_id)
-    dict_fields = ['gender', 'born_at', 'died_at']
+    print (author_obj)
+    dict_fields = ['name', 'gender', 'born_at', 'died_at', 'link']
     for field in dict_fields:
         author_info[field] = author_obj[field]
 

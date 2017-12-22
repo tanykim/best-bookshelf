@@ -9,7 +9,7 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 915500,Matthew Desmond,https://images.gr-assets.com/authors/1448070437p5/915500.jpg,https://www.goodreads.com/author/show/915500.Matthew_Desmond,male,,,,,,
 117182,Susan Faludi,https://images.gr-assets.com/authors/1245100555p5/117182.jpg,https://www.goodreads.com/author/show/117182.Susan_Faludi,female,1959,4,18,,,
 35807,Hisham Matar,https://images.gr-assets.com/authors/1210621856p5/35807.jpg,https://www.goodreads.com/author/show/35807.Hisham_Matar,male,1970,1,1,,,
-5168929,Magda Szab√≥,https://images.gr-assets.com/authors/1321090910p5/5168929.jpg,https://www.goodreads.com/author/show/5168929.Magda_Szab_,female,1917,10,5,2007,11,19
+5168929,Magda Szabó,https://images.gr-assets.com/authors/1321090910p5/5168929.jpg,https://www.goodreads.com/author/show/5168929.Magda_Szab_,female,1917,10,5,2007,11,19
 157697,Lucia Berlin,https://images.gr-assets.com/authors/1463323021p5/157697.jpg,https://www.goodreads.com/author/show/157697.Lucia_Berlin,female,1936,11,12,2004,11,12
 46051,Rachel Cusk,https://images.gr-assets.com/authors/1268246552p5/46051.jpg,https://www.goodreads.com/author/show/46051.Rachel_Cusk,female,1967,2,8,,,
 44076,Paul Beatty,https://images.gr-assets.com/authors/1410926394p5/44076.jpg,https://www.goodreads.com/author/show/44076.Paul_Beatty,male,,,,,,
@@ -18,7 +18,7 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 97917,Sven Beckert,https://s.gr-assets.com/assets/nophoto/user/m_200x266-d279b33f8eec0f27b7272477f09806be.png,https://www.goodreads.com/author/show/97917.Sven_Beckert,male,,,,,,
 314021,Helen Macdonald,https://images.gr-assets.com/authors/1400594607p5/314021.jpg,https://www.goodreads.com/author/show/314021.Helen_Macdonald,female,1970,,,,,
 522266,Andrea Wulf,https://images.gr-assets.com/authors/1440541635p5/522266.jpg,https://www.goodreads.com/author/show/522266.Andrea_Wulf,female,1972,,,,,
-769979,√Ösne Seierstad,https://images.gr-assets.com/authors/1377897628p5/769979.jpg,https://www.goodreads.com/author/show/769979._sne_Seierstad,female,1970,2,10,,,
+769979,Åsne Seierstad,https://images.gr-assets.com/authors/1377897628p5/769979.jpg,https://www.goodreads.com/author/show/769979._sne_Seierstad,female,1970,2,10,,,
 28186,Anthony Doerr,https://images.gr-assets.com/authors/1417812584p5/28186.jpg,https://www.goodreads.com/author/show/28186.Anthony_Doerr,male,1973,,,,,
 33794,Jenny Offill,https://images.gr-assets.com/authors/1475089752p5/33794.jpg,https://www.goodreads.com/author/show/33794.Jenny_Offill,female,1968,,,,,
 117786,Lily King,https://images.gr-assets.com/authors/1404743838p5/117786.jpg,https://www.goodreads.com/author/show/117786.Lily_King,female,1963,,,,,
@@ -53,7 +53,7 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 3389,Stephen King,https://images.gr-assets.com/authors/1362814142p5/3389.jpg,https://www.goodreads.com/author/show/3389.Stephen_King,male,1947,9,21,,,
 26417,Karen Russell,https://images.gr-assets.com/authors/1295563225p5/26417.jpg,https://www.goodreads.com/author/show/26417.Karen_Russell,female,1981,7,10,,,
 4455701,Eleanor Henderson,https://images.gr-assets.com/authors/1496801852p5/4455701.jpg,https://www.goodreads.com/author/show/4455701.Eleanor_Henderson,female,,,,,,
-4937879,T√©a Obreht,https://images.gr-assets.com/authors/1319073345p5/4937879.jpg,https://www.goodreads.com/author/show/4937879.T_a_Obreht,female,1985,9,30,,,
+4937879,Téa Obreht,https://images.gr-assets.com/authors/1319073345p5/4937879.jpg,https://www.goodreads.com/author/show/4937879.T_a_Obreht,female,1985,9,30,,,
 3956,Christopher Hitchens,https://images.gr-assets.com/authors/1434046956p5/3956.jpg,https://www.goodreads.com/author/show/3956.Christopher_Hitchens,male,1949,4,13,2011,12,15
 127037,Ian Brown,https://images.gr-assets.com/authors/1265652066p5/127037.jpg,https://www.goodreads.com/author/show/127037.Ian_Brown,male,1963,,,,,
 107079,Manning Marable,https://images.gr-assets.com/authors/1301757820p5/107079.jpg,https://www.goodreads.com/author/show/107079.Manning_Marable,male,1950,5,13,2011,4,1
@@ -82,7 +82,7 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 12589,Steven Millhauser,https://images.gr-assets.com/authors/1243408184p5/12589.jpg,https://www.goodreads.com/author/show/12589.Steven_Millhauser,male,1943,8,3,,,
 3534,Toni Morrison,https://images.gr-assets.com/authors/1494211316p5/3534.jpg,https://www.goodreads.com/author/show/3534.Toni_Morrison,female,1931,2,18,,,
 389474,Joseph O'Neill,https://images.gr-assets.com/authors/1406117552p5/389474.jpg,https://www.goodreads.com/author/show/389474.Joseph_O_Neill,male,1964,2,23,,,
-72039,Roberto Bola√±o,https://images.gr-assets.com/authors/1464727787p5/72039.jpg,https://www.goodreads.com/author/show/72039.Roberto_Bola_o,male,1953,4,28,2003,7,15
+72039,Roberto Bolaño,https://images.gr-assets.com/authors/1464727787p5/72039.jpg,https://www.goodreads.com/author/show/72039.Roberto_Bola_o,male,1953,4,28,2003,7,15
 3670,Jhumpa Lahiri,https://images.gr-assets.com/authors/1378932972p5/3670.jpg,https://www.goodreads.com/author/show/3670.Jhumpa_Lahiri,female,1967,7,11,,,
 1088758,Dexter Filkins,https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png,https://www.goodreads.com/author/show/1088758.Dexter_Filkins,male,1961,5,24,,,
 1462,Julian Barnes,https://images.gr-assets.com/authors/1387175450p5/1462.jpg,https://www.goodreads.com/author/show/1462.Julian_Barnes,male,1946,1,19,,,
@@ -117,7 +117,7 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 16708,Tony Judt,https://images.gr-assets.com/authors/1344698761p5/16708.jpg,https://www.goodreads.com/author/show/16708.Tony_Judt,male,1948,1,1,2010,8,6
 238,Joan Didion,https://images.gr-assets.com/authors/1335450818p5/238.jpg,https://www.goodreads.com/author/show/238.Joan_Didion,female,1934,12,5,,,
 7491,Marilynne Robinson,https://images.gr-assets.com/authors/1256021025p5/7491.jpg,https://www.goodreads.com/author/show/7491.Marilynne_Robinson,female,1943,11,26,,,
-1351903,Colm T√≥ib√≠n,https://images.gr-assets.com/authors/1350621306p5/1351903.jpg,https://www.goodreads.com/author/show/1351903.Colm_T_ib_n,male,1955,5,30,,,
+1351903,Colm Tóibín,https://images.gr-assets.com/authors/1350621306p5/1351903.jpg,https://www.goodreads.com/author/show/1351903.Colm_T_ib_n,male,1955,5,30,,,
 463,Philip Roth,https://images.gr-assets.com/authors/1399886959p5/463.jpg,https://www.goodreads.com/author/show/463.Philip_Roth,male,1933,3,19,,,
 6410,Alice Munro,https://images.gr-assets.com/authors/1494056984p5/6410.jpg,https://www.goodreads.com/author/show/6410.Alice_Munro,female,1931,7,10,,,
 1728,Orhan Pamuk,https://images.gr-assets.com/authors/1423469681p5/1728.jpg,https://www.goodreads.com/author/show/1728.Orhan_Pamuk,male,1952,6,7,,,
@@ -131,7 +131,7 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 1064072,T.C. Boyle,https://images.gr-assets.com/authors/1295563618p5/1064072.jpg,https://www.goodreads.com/author/show/1064072.T_C_Boyle,male,1948,12,2,,,
 104203,William Taubman,https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png,https://www.goodreads.com/author/show/104203.William_Taubman,male,1940,11,13,,,
 33,Edward P. Jones,https://images.gr-assets.com/authors/1206505071p5/33.jpg,https://www.goodreads.com/author/show/33.Edward_P_Jones,male,1950,10,5,,,
-13450,Gabriel Garc√≠a M√°rquez,https://images.gr-assets.com/authors/1476349500p5/13450.jpg,https://www.goodreads.com/author/show/13450.Gabriel_Garc_a_M_rquez,male,1927,3,6,2014,4,17
+13450,Gabriel García Márquez,https://images.gr-assets.com/authors/1476349500p5/13450.jpg,https://www.goodreads.com/author/show/13450.Gabriel_Garc_a_M_rquez,male,1927,3,6,2014,4,17
 13929,Adrian Nicole LeBlanc,https://images.gr-assets.com/authors/1390516521p5/13929.jpg,https://www.goodreads.com/author/show/13929.Adrian_Nicole_LeBlanc,female,1963,12,9,,,
 18514,Claire Tomalin,https://images.gr-assets.com/authors/1361044853p5/18514.jpg,https://www.goodreads.com/author/show/18514.Claire_Tomalin,female,1933,6,20,,,
 7499942,Miranda Carter,https://s.gr-assets.com/assets/nophoto/user/f_200x266-3061b784cc8e7f021c6430c9aba94587.png,https://www.goodreads.com/author/show/7499942.Miranda_Carter,female,1965,,,,,
@@ -156,7 +156,7 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 21426,Richard A. Posner,https://images.gr-assets.com/authors/1354902090p5/21426.jpg,https://www.goodreads.com/author/show/21426.Richard_A_Posner,male,1939,1,11,,,
 1262010,Annie Proulx,https://images.gr-assets.com/authors/1219720509p5/1262010.jpg,https://www.goodreads.com/author/show/1262010.Annie_Proulx,female,1935,8,22,,,
 4128,J.M. Coetzee,https://images.gr-assets.com/authors/1458869911p5/4128.jpg,https://www.goodreads.com/author/show/4128.J_M_Coetzee,male,1940,2,9,,,
-60033,Ant√≥nio R. Dam√°sio,https://images.gr-assets.com/authors/1235095020p5/60033.jpg,https://www.goodreads.com/author/show/60033.Ant_nio_R_Dam_sio,male,1944,2,25,,,
+60033,António R. Damásio,https://images.gr-assets.com/authors/1235095020p5/60033.jpg,https://www.goodreads.com/author/show/60033.Ant_nio_R_Dam_sio,male,1944,2,25,,,
 4619485,John Keegan,https://images.gr-assets.com/authors/1332081125p5/4619485.jpg,https://www.goodreads.com/author/show/4619485.John_Keegan,male,1934,5,15,2012,8,2
 57501,Michael Frayn,https://images.gr-assets.com/authors/1230345003p5/57501.jpg,https://www.goodreads.com/author/show/57501.Michael_Frayn,male,1933,9,8,,,
 162702,Jean Strouse,https://images.gr-assets.com/authors/1417911691p5/162702.jpg,https://www.goodreads.com/author/show/162702.Jean_Strouse,female,1945,,,,,
@@ -183,3 +183,13 @@ author_id,name,image_url,link,gender,birth_year,birth_month,birth_day,death_year
 212208,Cary Reich,https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png,https://www.goodreads.com/author/show/212208.Cary_Reich,male,1949,8,12,1998,3,3
 3299,Salman Rushdie,https://images.gr-assets.com/authors/1440718419p5/3299.jpg,https://www.goodreads.com/author/show/3299.Salman_Rushdie,male,1947,6,19,,,
 32307,David Quammen,https://images.gr-assets.com/authors/1319321092p5/32307.jpg,https://www.goodreads.com/author/show/32307.David_Quammen,male,1948,2,24,,,
+4194881,Stephen Greenblatt,https://images.gr-assets.com/authors/1302117239p5/4194881.jpg,https://www.goodreads.com/author/show/4194881.Stephen_Greenblatt,male,1943,11,7,,,
+68992,Ali Smith,https://images.gr-assets.com/authors/1215657948p5/68992.jpg,https://www.goodreads.com/author/show/68992.Ali_Smith,female,1962,8,24,,,
+16902,Mohsin Hamid,https://images.gr-assets.com/authors/1361498297p5/16902.jpg,https://www.goodreads.com/author/show/16902.Mohsin_Hamid,male,1971,1,1,,,
+378209,Min Jin Lee,https://images.gr-assets.com/authors/1192651627p5/378209.jpg,https://www.goodreads.com/author/show/378209.Min_Jin_Lee,female,1968,7,11,,,
+118226,Naomi Alderman,https://images.gr-assets.com/authors/1272068831p5/118226.jpg,https://www.goodreads.com/author/show/118226.Naomi_Alderman,female,1974,,,,,
+1676417,Jesmyn Ward,https://images.gr-assets.com/authors/1314898674p5/1676417.jpg,https://www.goodreads.com/author/show/1676417.Jesmyn_Ward,female,1977,,,,,
+16819826,Richard O. Prum,https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png,https://www.goodreads.com/author/show/16819826.Richard_O_Prum,male,1961,,,,,
+15189032,James Forman Jr.,https://s.gr-assets.com/assets/nophoto/user/u_200x266-e183445fd1a1b5cc7075bb1cf7043306.png,https://www.goodreads.com/author/show/15189032.James_Forman_Jr_,male,1967,,,,,
+147216,Caroline Fraser,https://s.gr-assets.com/assets/nophoto/user/f_200x266-3061b784cc8e7f021c6430c9aba94587.png,https://www.goodreads.com/author/show/147216.Caroline_Fraser,female,,,,,,
+5220577,Patricia Lockwood,https://images.gr-assets.com/authors/1358584189p5/5220577.jpg,https://www.goodreads.com/author/show/5220577.Patricia_Lockwood,female,1982,4,27,,,

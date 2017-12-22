@@ -124,10 +124,11 @@ function showModal(d, i, count, list, entered) {
     bestseller: bestseller,
     rating_avg: d.rating_asc.toFixed(2),
     rating_count: d.rating_count_asc.toLocaleString(),
+    original_publication_date: d.book.original_publication_date
   };
   _.each(bookInfo, (v, k) => {
     if (v) {
-      if (k === 'translator' || k === 'editor' || k === 'subtitle' || k === 'bestseller') {
+      if (k === 'translator' || k === 'editor' || k === 'subtitle' || k === 'bestseller' || k === 'original_publication_date') {
         d3.select(`.js-d-${k}-wrapper`).classed('is-hidden', v === 'N/A');
       }
       d3.select(`.js-d-${k}`).html(v);

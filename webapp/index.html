@@ -36,7 +36,7 @@
     <meta property="og:title" content="Best Bookshelf"/>
     <meta property="og:site_name" content="Data Visualization of the New York Times Best Books"/>
     <meta property="og:locale" content="en_US"/>
-    <meta property="og:description" content="Explore +200 best books selected by the New York Times since 1996"/>
+    <meta property="og:description" content="Explore best books selected by the New York Times since 1996"/>
     <meta property="og:image" content="http://tany.kim/best-bookshelf/images/project.png"/>
     <meta property="og:image:type" content="image/png"/>
     <meta name="description" content="Data Visualization of best books selected by the New York Times since 1996. Created by Tanyoung Kim. Powered by Goodreads API & the New York Times Books API"/>
@@ -223,7 +223,7 @@
             <li>The title and author (including translator and or editors) of best books are manually scrapped from the New York Times articles.</li>
             <li>Meta information of each book (incl. page numbers, ratings, publishers) and author (incl. gender, birth and death dates) is acquired with <a href="https://www.goodreads.com/api" target="_blank">Goodread APIs</a> or parsed from Goodreads pages. Some missing information is added later manually.</li>
             <li>The New York Times bestseller information is acquired with <a href="https://developer.nytimes.com/books_api.json" target="_blank">the New York Times Books API.</a></li>
-            <li>The dataset was generated on <span id="generation-date"></span></li>
+            <li>The dataset till 2016 books was generated on July 15, 2017, for 2017 Best books on <span id="generation-date"></span></li>
           </ul>
         </div>
       </div>
@@ -234,13 +234,13 @@
         <p class="share">
           Share &nbsp;
           <span><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//tany.kim/best-bookshelf"><span class="facebook"></span></a></span>
-          <span><a href="https://twitter.com/home?status=%23data%20%23visualization%20of%20best%20books%20by%20%40nytimesbooks%20from%201996%20to%202016.%20Meta%20data%20via%20%40goodreads%20%23d3%20%23dataviz%20%23datavis"><span class="twitter"></span></a></span>
+          <span><a href="https://twitter.com/home?status=New%20project!%20%20http%3A//tany.kim/best-bookshelf%20%0A%23data%20%23visualization%20of%20best%20books%20by%20%40nytimesbooks,%20%40goodreads%20%23d3%20%23dataviz%20%23book"><span class="twitter"></span></a></span>
           <span><a href="https://plus.google.com/share?url=http%3A//tany.kim/best-bookshelf"><span class="googleplus"></span></a></span>
           <span><a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//tany.kim/best-bookshelf&title=Best%20BookShelf&summary=Data%20Visualization%20of%20best%20books%20by%20the%20New%20York%20Times%20from%201996%20to%202016&source="><span class="linkedin"></span></a></span>
           <span><a href="mailto:?&subject=Data Visualization of Best Books&body=Check%20this%20out%20cool%20visualization!%0Ahttp%3A//tany.kim/best-bookshelf"><span class="email"></span></a></span></p>
         <p class="share">Created by &nbsp; <a href="http://tany.kim" target="_blank">Tanyoung Kim</a></p>
         <p class="share">
-          Lear more &nbsp;
+          Learn more &nbsp;
           <span><a href="https://github.com/tanykim/best-bookshelf" target="_blank"><span class="github"></span></a></span>
           <span><a href="https://medium.com/@tanykim/best-bookshelf-data-visualization-adapting-real-world-objects-with-d3-js-ca420b5d79cc" target="_blank"><span class="medium"></span></a></a></span>
         </p>
@@ -273,6 +273,7 @@
                 <div class="info-elm">
                   <p><span class="info js-d-pages"></span> pages</p>
                   <p>Published <span class="info js-d-publication_date"></span> by <span class="info js-d-publisher"></span></p>
+                  <p class="js-d-original_publication_date-wrapper is-hidden">First published <span class="info js-d-original_publication_date"></span></p>
                   <p>Rated <span class="info js-d-rating_avg"></span> by <span class="info js-d-rating_count"></span> Goodreads users</p>
                 </div>
               </div>
@@ -299,14 +300,15 @@
   <!-- <script src="js/data-old.js"></script> -->
   <!-- <script src="js/main-circle.js"></script> -->
   <script src="js/main.js"></script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-102587410-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
 </html>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-102587410-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

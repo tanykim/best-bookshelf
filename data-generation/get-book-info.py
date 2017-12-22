@@ -77,8 +77,8 @@ def get_book_info(book_id, genre):
     return book_info
 
 #load data from the dataset collected manually
-start_year = 2005
-end_year = 1996
+start_year = 2017
+end_year = 2017
 with open('csv/goodreads-ids.csv', newline='', encoding='latin-1') as f:
     data = []
     for row in csv.DictReader(f):
@@ -89,4 +89,5 @@ with open('csv/goodreads-ids.csv', newline='', encoding='latin-1') as f:
             datum = get_book_info(row['book_id'], row['genre'])
             datum_base.update(datum)
             data.append(datum_base)
+    print (data)
     goodreads.save_as_csv('book-info', data)

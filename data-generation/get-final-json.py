@@ -91,6 +91,7 @@ def save_as_json(book_data, author_data, seller_data):
                 editor=row['editor'],
                 publisher=row['publisher'],
                 publication_date=publication_date[1],
+                original_publication_date=original_publication_date[1] if publication_date[0] != original_publication_date[0] else 'N/A',
                 pages=int(row['num_pages']),
                 rating=dict(
                     count=int(row['ratings_count']),
@@ -114,7 +115,7 @@ with open('csv/book-info.csv', newline='', encoding='utf-8') as f:
         book_data.append(row)
 
 author_data = {}
-with open('csv/author-info.csv', newline='', encoding='utf-8') as f:
+with open('csv/author-info.csv', newline='', encoding='utf-8', errors='replace') as f:
     for row in csv.DictReader(f):
         id = row['author_id']
         author_data[id] = row

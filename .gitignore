@@ -3,4 +3,7 @@ data-generation/keys.json
 data-generation/amazon-api.py
 data-generation/.idea
 data-generation/__pychahe__
+data-generation/__pycache__
+data-generation/venv/
 webapp/node_modules
+package-lock.js
