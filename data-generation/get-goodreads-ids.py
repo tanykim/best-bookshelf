@@ -37,8 +37,8 @@ def search_by_author_and_book(title, author):
     return dict(book_id=book_id, author_id=author_id)
 
 #load data from the dataset collected manually
-start_year = 2017
-end_year = 2017
+start_year = 2018
+end_year = 2018
 with open('csv/nytimes-best-books.csv', newline='', encoding='latin-1') as f:
     data = []
     for row in csv.DictReader(f):

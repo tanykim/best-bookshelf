@@ -4,7 +4,7 @@ import requests
 from datetime import datetime
 import re
 
-has_manual_data = True
+has_manual_data = False
 
 #load manually updated birth, death dates
 author_manual = {}
@@ -30,7 +30,7 @@ def search_wiki(name):
     if match:
         print(json['query']['search'][0]['title'], name, match.group(0), str)
 
-#once the gender dates are manually compelted, then update the autho info with other fields
+#once the gender dates are manually compelted, then update the author info with other fields
 def update_author_info(author_id):
     author_obj = goodreads.get_object('author', author_id)
     author_info = dict(author_id=author_id)
@@ -38,7 +38,7 @@ def update_author_info(author_id):
     dict_fields = ['name', 'image_url', 'link']
     for field in dict_fields:
         author_info[field] = author_obj[field]
-    #COMMENT following three lines, this for the first run and the manual addition of birth and death dates
+    #COMMENT following three lines, this is for the first run and the manual addition of birth and death dates
     # update_fields = ['gender', 'birth_year', 'birth_month', 'birth_day', 'death_year', 'death_month', 'death_day']
     # for field in update_fields:
     #     author_info[field] = author_manual[author_id][field]
@@ -48,13 +48,12 @@ def update_author_info(author_id):
 def get_author_info(author_id):
     author_obj = goodreads.get_object('author', author_id)
     author_info = dict(author_id=author_id)
-    print (author_obj)
-    dict_fields = ['name', 'gender', 'born_at', 'died_at', 'link']
+    dict_fields = ['name', 'gender', 'born_at', 'died_at', 'link', 'image_url']
     for field in dict_fields:
         author_info[field] = author_obj[field]
 
     #often there's multiple spaces between first and last name
-    author_info['name'] = re.sub( '\s+', ' ', author_info['name']).strip();
+    author_info['name'] = re.sub( '\s+', ' ', author_info['name']).strip()
     author_info['birth_year'] = None
     author_info['birth_month'] = None
     author_info['birth_day'] = None
@@ -80,6 +79,7 @@ def get_author_info(author_id):
         author_info['death_month'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%m')
         author_info['death_day'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%d')
 
+    print (author_info)
     return author_info
 
 # get author ids
@@ -92,7 +92,7 @@ with open('csv/goodreads-ids.csv', newline='', encoding='latin-1') as f:
             author_ids.append(row['author2_id'])
 # check author_ids parsed ids
 already_parsed = []
-with open('csv/author-info.csv', newline='', encoding='utf-8') as f:
+with open('csv/author-info.csv', newline='', encoding='utf-8', errors='ignore') as f:
     for row in csv.DictReader(f):
         already_parsed.append(row['author_id'])
 

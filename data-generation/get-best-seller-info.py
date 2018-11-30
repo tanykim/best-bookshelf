@@ -10,17 +10,18 @@ with open('keys.json', 'r', encoding='utf-8') as keys:
     keys = json.load(keys)
     NYTIMES_API_KEY= keys['nytimes_key']
 
+print (NYTIMES_API_KEY)
 def get_best_seller_info(isbn, author, title):
     base_url = 'http://api.nytimes.com/svc/books/v3/lists/best-sellers/history.json?api-key=' + NYTIMES_API_KEY
     if isbn != '':
         # print ('--seaerch by isbn')
-        url = base_url + 'isbn=' + isbn
+        url = base_url + '&isbn=' + isbn
     else:
         # print ('--search by title and author')
-        url = base_url + 'title=' + title.split(':')[0] + '&author=' + author
+        url = base_url + '&title=' + title.split(':')[0] + '&author=' + author
+    print (url)
     json = requests.get(url).json()
     genre = ''
-    print (json['message'])
     results_count = json['num_results']
     best_seller = {}
     if results_count == 1:
@@ -41,8 +42,8 @@ def get_best_seller_info(isbn, author, title):
     return dict(best_seller=best_seller, genre=genre)
 
 #load data from the dataset collected manually
-start_year = 2017
-end_year = 2017
+start_year = 2018
+end_year = 2018
 with open('csv/book-info.csv', newline='', encoding='latin-1') as f:
     data = {}
     for row in csv.DictReader(f):
@@ -56,4 +57,4 @@ with open('csv/book-info.csv', newline='', encoding='latin-1') as f:
     with open('csv/best-seller-info.json', 'w', encoding='utf-8') as outfile:
         json_data = json.dumps(data, ensure_ascii=True)
         print (json_data)
-        # outfile.write(json_data)
+        #outfile.write(json_data)
