@@ -42,7 +42,7 @@ def update_author_info(author_id):
     # update_fields = ['gender', 'birth_year', 'birth_month', 'birth_day', 'death_year', 'death_month', 'death_day']
     # for field in update_fields:
     #     author_info[field] = author_manual[author_id][field]
-    return author_info
+    # return author_info
 
 #get author gender and birth and death dates
 def get_author_info(author_id):
@@ -51,7 +51,6 @@ def get_author_info(author_id):
     dict_fields = ['name', 'gender', 'born_at', 'died_at', 'link', 'image_url']
     for field in dict_fields:
         author_info[field] = author_obj[field]
-
     #often there's multiple spaces between first and last name
     author_info['name'] = re.sub( '\s+', ' ', author_info['name']).strip()
     author_info['birth_year'] = None
@@ -61,24 +60,25 @@ def get_author_info(author_id):
     author_info['death_month'] = None
     author_info['death_day'] = None
 
-    # Update birth info from the web pages
-    if author_obj['born_at'] == None:
-        author_info['born_at'] = parse_html_page(author_info['link'], author_info['born_at'])
-    #show possible birth date from Wikipedia
-    if author_obj['born_at'] == None:
-        search_wiki(author_info['name'])
-
-    if author_info['born_at'] is not None:
-        bd = author_info['born_at']
-        author_info['birth_year'] = datetime.strptime(bd, '%Y/%m/%d').strftime('%Y')
-        author_info['birth_month'] = datetime.strptime(bd, '%Y/%m/%d').strftime('%m')
-        author_info['birth_day'] = datetime.strptime(bd, '%Y/%m/%d').strftime('%d')
-    if author_info['died_at'] is not None:
-        dd = author_info['died_at']
-        author_info['death_year'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%Y')
-        author_info['death_month'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%m')
-        author_info['death_day'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%d')
-
+    # 2019 update - wikipedia page doesn't work :(
+    # # Update birth info from the web pages
+    # if author_obj['born_at'] == None:
+    #     author_info['born_at'] = parse_html_page(author_info['link'], author_info['born_at'])
+    # #show possible birth date from Wikipedia
+    # if author_obj['born_at'] == None:
+    #     search_wiki(author_info['name'])
+    #
+    # if author_info['born_at'] is not None:
+    #     bd = author_info['born_at']
+    #     author_info['birth_year'] = datetime.strptime(bd, '%Y/%m/%d').strftime('%Y')
+    #     author_info['birth_month'] = datetime.strptime(bd, '%Y/%m/%d').strftime('%m')
+    #     author_info['birth_day'] = datetime.strptime(bd, '%Y/%m/%d').strftime('%d')
+    # if author_info['died_at'] is not None:
+    #     dd = author_info['died_at']
+    #     author_info['death_year'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%Y')
+    #     author_info['death_month'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%m')
+    #     author_info['death_day'] = datetime.strptime(dd, '%Y/%m/%d').strftime('%d')
+    #
     print (author_info)
     return author_info
 

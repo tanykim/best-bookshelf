@@ -5,5 +5,7 @@ data-generation/.idea
 data-generation/__pychahe__
 data-generation/__pycache__
 data-generation/venv/
+data-generation/env/
 webapp/node_modules
 package-lock.js
+

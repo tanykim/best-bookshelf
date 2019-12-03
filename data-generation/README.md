@@ -34,7 +34,7 @@ First, this generates ```author-manual-info.csv```. Then run the script again, b
 
 ## Step 5. Get NT Times best seller info
 
-Run ```get-best-seller-info.py```. The output wll be saved in ```csv/best-seller-info.json```
+Run ```get-best-seller-info.py```. The output will be printed out in the console. Append the created objects saved to ```csv/best-seller-info.json```
 
 ## Step 5. Save final JSON
 
