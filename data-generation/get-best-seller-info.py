@@ -41,8 +41,8 @@ def get_best_seller_info(isbn, author, title):
     return dict(best_seller=best_seller, genre=genre)
 
 #load data from the dataset collected manually
-start_year = 2019
-end_year = 2019
+start_year = 2020
+end_year = 2020
 with open('csv/book-info.csv', newline='', encoding='latin-1') as f:
     data = {}
     for row in csv.DictReader(f):
@@ -55,7 +55,7 @@ with open('csv/book-info.csv', newline='', encoding='latin-1') as f:
     json_data = json.dumps(data, ensure_ascii=True)
     print (json_data)
 
-    # with open('csv/best-seller-info.json', 'w', encoding='utf-8') as outfile:
-    #     json_data = json.dumps(data, ensure_ascii=True)
-    #     print (json_data)
-        # outfile.write(json_data)
+# with open('csv/best-seller-info.json', 'w', encoding='utf-8') as outfile:
+#     json_data = json.dumps(data, ensure_ascii=True)
+#     print (json_data)
+#     outfile.write(json_data)

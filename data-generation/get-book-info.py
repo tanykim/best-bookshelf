@@ -52,7 +52,7 @@ def get_book_info(book_id, genre):
         for field in work_dict_fields:
             if '#text' in work[field]:
                 book_info[field] = work[field]['#text']
-    if hasEmpty and book_info['link'] != '' or 'nophoto/book/111' in book_info['image_url']:
+    # if hasEmpty and book_info['link'] != '' or 'nophoto/book/111' in book_info['image_url']:
         # update in 2019 -- not working anymore, manually check missing information
         # parse missing data from html page
         # data = parse_html_page(book_info['link'],
@@ -77,8 +77,8 @@ def get_book_info(book_id, genre):
     return book_info
 
 #load data from the dataset collected manually
-start_year = 2019
-end_year = 2019
+start_year = 2020
+end_year = 2020
 with open('csv/goodreads-ids.csv', newline='', encoding='latin-1') as f:
     data = []
     for row in csv.DictReader(f):

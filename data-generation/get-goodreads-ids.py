@@ -1,7 +1,5 @@
 import csv
-
 import goodreads
-
 
 # find the best matching book from work array
 def find_best_match(works, author_in_query, book_in_query, result):
@@ -44,8 +42,8 @@ def search_by_author_and_book(title, author):
 
 
 # load data from the dataset collected manually
-start_year = 2019
-end_year = 2019
+start_year = 2020
+end_year = 2020
 with open("csv/nytimes-best-books.csv", newline="", encoding="latin-1") as f:
     data = []
     for row in csv.DictReader(f):
