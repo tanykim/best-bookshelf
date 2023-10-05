@@ -42,13 +42,13 @@ def search_by_author_and_book(title, author):
 
 
 # load data from the dataset collected manually
-start_year = 2020
-end_year = 2020
+start_year = 2022
+end_year = 2021
 with open("csv/nytimes-best-books.csv", newline="", encoding="latin-1") as f:
     data = []
     for row in csv.DictReader(f):
-        print(row["year"], row["author_name"], row["book_title"])
         if int(row["year"]) <= start_year and int(row["year"]) >= end_year:
+            print(row["year"], row["author_name"], row["book_title"])
             datum_base = row
             datum = search_by_author_and_book(row["book_title"], row["author_name"])
             datum_base.update(datum)

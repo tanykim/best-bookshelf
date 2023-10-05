@@ -16,7 +16,7 @@ Save the data in ```csv/nytimes-best-books.csv```
 Run ```get-goodreads-ids.py```. The output will be saved in ```csv/goodreads-ids.csv```
 
 Set start and end year as you accumulate dataset from Step 1.
-The missing IDs MUST be included later manually for the folowing steps.
+The missing IDs MUST be included later manually for the following steps.
 
 ## Step 3. Get book info from Goodreads
 

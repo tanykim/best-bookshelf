@@ -21,9 +21,9 @@ def get_best_seller_info(isbn, author, title):
     print (url)
     json = requests.get(url).json()
     genre = ''
-    results_count = json['num_results']
+    results_count = json['num_results'] if 'num_results' in json else 0
     best_seller = {}
-    if results_count == 1:
+    if results_count == 1 and len(json['results']) > 0:
         print ('##### found')
         r = json['results'][0]['ranks_history']
         history = list(map(lambda x: dict(
@@ -41,8 +41,8 @@ def get_best_seller_info(isbn, author, title):
     return dict(best_seller=best_seller, genre=genre)
 
 #load data from the dataset collected manually
-start_year = 2020
-end_year = 2020
+start_year = 2022
+end_year = 2021
 with open('csv/book-info.csv', newline='', encoding='latin-1') as f:
     data = {}
     for row in csv.DictReader(f):

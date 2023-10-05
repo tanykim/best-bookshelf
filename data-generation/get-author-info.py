@@ -48,7 +48,8 @@ def update_author_info(author_id):
 def get_author_info(author_id):
     author_obj = goodreads.get_object('author', author_id)
     author_info = dict(author_id=author_id)
-    dict_fields = ['name', 'gender', 'born_at', 'died_at', 'link', 'image_url']
+    # removed gender since it returned error
+    dict_fields = ['name', 'born_at', 'died_at', 'link', 'image_url']
     for field in dict_fields:
         author_info[field] = author_obj[field]
     #often there's multiple spaces between first and last name
